@@ -147,11 +147,11 @@ class Muganda(models.Model):
         ('Female','Female')
     ]
     Gender = models.CharField(max_length=50,choices=Gender_TYPE_CHOICES)
-    Age_TYPE_CHOICES=[
-        ('Below 18','Below 18'),
-        ('Above 18','Above 18')
-    ]
-    Age=models.CharField(max_length=50,choices=Age_TYPE_CHOICES)
+    # Age_TYPE_CHOICES=[
+    #     ('Below 18','Below 18'),
+    #     ('Above 18','Above 18')
+    # ]
+    Date_of_birth=models.CharField(max_length=50)
     photo=models.ImageField(upload_to='pic')
 
 
