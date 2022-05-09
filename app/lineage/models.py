@@ -161,12 +161,12 @@ class Muganda(models.Model):
 
 
     class Meta:
-        verbose_name = ("name")
-        verbose_name_plural = ("name")
+        verbose_name = ("Muganda")
+        verbose_name_plural = ("Muganda")
 
     def __str__(self):
         return f'{self.Nju} - {self.name} - {self.father}-{self.your_Life_Status}'
 
     def get_absolute_url(self):
-        return reverse("Lugya_detail", kwargs={"pk": self.pk})
+        return reverse("Muganda_detail", kwargs={"pk": self.pk})
 
