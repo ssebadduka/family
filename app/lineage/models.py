@@ -133,7 +133,7 @@ class Muganda(models.Model):
         ('Died','Died'),
         ('Living','Living')
     ]
-    your_Life_Status =models.CharField(max_length=100,choices=Life_TYPE_CHOICES)
+    your_Life_Status =models.CharField(max_length=100,choices=Life_TYPE_CHOICES,default='Living')
     father = models.CharField(max_length=100,verbose_name='Taata(Father Full Name)')
     father_TYPE_CHOICES=[
         ('Died','Died'),
@@ -146,12 +146,12 @@ class Muganda(models.Model):
         ('Male','Male'),
         ('Female','Female')
     ]
-    Gender = models.CharField(max_length=50,choices=Gender_TYPE_CHOICES)
+    Gender = models.CharField(max_length=50,choices=Gender_TYPE_CHOICES,default='Male')
     # Age_TYPE_CHOICES=[
     #     ('Below 18','Below 18'),
     #     ('Above 18','Above 18')
     # ]
-    Date_of_birth=models.CharField(max_length=50)
+    Date_of_birth=models.DateField(auto_now_add=True)
     photo=models.ImageField(upload_to='pic')
 
 
