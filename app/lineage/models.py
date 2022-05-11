@@ -151,7 +151,7 @@ class Muganda(models.Model):
     #     ('Below 18','Below 18'),
     #     ('Above 18','Above 18')
     # ]
-    Date_of_birth=models.DateField(auto_now_add=True)
+    Date_of_birth = models.DateField()
     photo=models.ImageField(upload_to='pic')
 
 
